@@ -1,0 +1,9 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 94px;
+  background: #222327;
+  border-radius: 100%;
+}
