@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../components/Navigation.module.css";
+import { FaHome } from "react-icons/fa";
 
 const Navigation = () => {
   // State để theo dõi chỉ mục của phần tử `li` đang active

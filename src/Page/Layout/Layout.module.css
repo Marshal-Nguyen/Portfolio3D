@@ -1,9 +1,169 @@
-.navigation {
+/* .borderGradient {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    to right bottom,
+    #8400ff,
+    #a200ff,
+    #5680ff,
+    #883adc,
+    #d7d8ec
+  );
+  background-size: 300% 300%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: border-gradient 5s ease-in-out infinite; 
+}
+
+@keyframes border-gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+} */
+.container {
+  width: 420px;
+  height: 80px;
+  margin-right: 8px;
+  background-color: #000000;
+  margin-bottom: 8px;
+  border-end-end-radius: 10px;
+  border-start-start-radius: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.scroll {
+  display: flex;
+  animation: scroll 10s linear infinite; /* Tốc độ di chuyển */
+}
+
+.techCircle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  color: rgb(1, 1, 1);
+  font-size: 7px;
+  border: solid 1px;
+}
+.techLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50%)); /* Di chuyển nửa danh sách để quay lại */
+  }
+}
+/* From Uiverse.io by MijailVillegas */
+.navi {
+  width: 420px;
+  height: 80px;
+  background-color: #000000;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  border-start-end-radius: 10px;
+  border-end-start-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
-  height: 94px;
-  background: #222327;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+.svg {
+  margin-top: 5px;
+  transition: all 0.3s;
+  padding: 1rem;
+  height: 60px;
+  width: 60px;
   border-radius: 100%;
+  color: rgb(33, 178, 183);
+  fill: currentColor;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.text {
+  opacity: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
+  transition: all 0.3s;
+  color: rgb(0, 157, 162);
+  background-color: rgba(255, 255, 255);
+  position: absolute;
+  z-index: 9999;
+  box-shadow: -5px 0 1px rgba(153, 153, 153, 0.6),
+    -10px 0 1px rgba(153, 153, 153, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.7),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.iso {
+  transition: 0.5s;
+}
+.iso:hover a > .svg {
+  transform: translate(15px, -15px);
+  border-radius: 100%;
+}
+
+.iso:hover .text {
+  opacity: 1;
+  transform: translate(25px, -2px) skew(-5deg);
+}
+
+.iso:hover .svg {
+  transform: translate(5px, -5px);
+}
+
+.iso span {
+  opacity: 0;
+  position: absolute;
+  color: #1877f2;
+  border-color: #1877f2;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+  border-radius: 50%;
+  transition: all 0.3s;
+  height: 60px;
+  width: 60px;
+}
+
+.iso:hover span {
+  opacity: 1;
+}
+
+.iso:hover span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.iso:hover span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.iso:hover span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
 }
