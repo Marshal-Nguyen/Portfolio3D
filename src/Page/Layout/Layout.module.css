@@ -1,33 +1,3 @@
-/* .borderGradient {
-  position: absolute;
-  inset: 0;
-  border-radius: 1.5rem;
-  background: linear-gradient(
-    to right bottom,
-    #8400ff,
-    #a200ff,
-    #5680ff,
-    #883adc,
-    #d7d8ec
-  );
-  background-size: 300% 300%; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: border-gradient 5s ease-in-out infinite; 
-}
-
-@keyframes border-gradient {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-} */
 .container {
   width: 420px;
   height: 80px;
@@ -170,42 +140,49 @@
 .tech {
   width: 100%;
   height: 100%;
-  border-left-color: #d8b4fe; /* Màu tím nhạt cho border bên trái */
-  background-color: #000000; /* Màu nền trắng */
+  background-color: #5a7e96;
   margin-left: 20px;
   margin-right: 20px;
   position: relative;
-  border-radius: 16px; /* Bo góc tròn */
+  border-radius: 30px; /* Bo góc tròn */
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
     inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
 }
 /* From Uiverse.io by ilkhoeri */
 .wrapper {
   width: 100%;
-  height: 100%;
+  height: 150%;
   position: relative;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+.modelContainer {
+  position: relative; /* Để cho ShibaModel và inner có thể căn giữa với nhau */
+  width: 100%; /* Điều chỉnh kích thước tùy ý */
+  height: 100%; /* Điều chỉnh chiều cao */
+  left: 45px;
+  top: -150px;
+  z-index: 1;
+}
+
 .inner {
   --w: 100px;
   --h: 150px;
   --translateZ: calc((var(--w) + var(--h)) + 0px);
-  --rotateX: -15deg;
+  --rotateX: -2deg;
   --perspective: 1000px;
   position: absolute;
   width: var(--w);
   height: var(--h);
-  top: 25%;
+  top: 10%;
   left: calc(50% - (var(--w) / 2) - 2.5px);
-  z-index: 2;
+  z-index: 2; /* Đặt z-index cao hơn để nằm trên mô hình */
   transform-style: preserve-3d;
   transform: perspective(var(--perspective));
-  animation: rotating 20s linear infinite; /* */
+  animation: rotating 20s linear infinite;
 }
 @keyframes rotating {
   from {
@@ -238,11 +215,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: #0000
+  background: #ffffff00
     radial-gradient(
       circle,
-      rgba(var(--color-card), 0.2) 0%,
-      rgba(var(--color-card), 0.6) 80%,
-      rgba(var(--color-card), 0.9) 100%
+      rgba(var(--color-card), 0.1) 0%,
+      rgba(var(--color-card), 0.1) 80%,
+      rgba(var(--color-card), 0.1) 100%
     );
 }
