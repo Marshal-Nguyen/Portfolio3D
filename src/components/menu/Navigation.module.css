@@ -1,15 +1,16 @@
 .icon,
 .text {
-  color: #ffffff;
+  color: #81bdde;
 }
 .navigation {
   position: relative;
-  width: 310px;
+  width: 120%;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  background-color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
@@ -35,13 +36,13 @@ li a {
   flex-direction: column;
   width: 100%;
   text-align: center;
-  font-weight: 300;
+  font-weight: 500;
 }
 a .icon {
   position: relative;
   display: block;
   line-height: 60px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: center;
   transition: 0.5s;
 }
@@ -52,7 +53,7 @@ li.active a .icon {
 a .text {
   position: relative;
   font-weight: 400;
-  font-size: 0.75em;
+  font-size: 0.8em;
   letter-spacing: 0.06em;
   transition: 0.5s;
   opacity: 0;
@@ -67,13 +68,13 @@ li.active a .text {
   top: -50%;
   width: 55px;
   height: 55px;
-  background: rgb(56, 47, 47);
+  background: #4cbfff;
   padding: 4px;
   box-sizing: border-box;
   border-radius: 50%;
   border: 3px solid #ffffff;
   transition: 0.5s;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+  box-shadow: inset 0 0 20px rgba(103, 195, 241, 0.3),
     inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
 }
 .indicator::before,

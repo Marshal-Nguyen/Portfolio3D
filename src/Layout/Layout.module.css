@@ -1,0 +1,33 @@
+/* Layout chính thống */
+.container {
+  color: red;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    140deg,
+    hsl(200deg 100% 95%) 0%,
+    hsl(200deg 88% 94%) 7%,
+    hsl(200deg 81% 92%) 14%,
+    hsl(201deg 76% 91%) 20%,
+    hsl(201deg 72% 90%) 26%,
+    hsl(201deg 70% 88%) 31%,
+    hsl(201deg 68% 87%) 36%,
+    hsl(202deg 66% 86%) 41%,
+    hsl(202deg 65% 84%) 45%,
+    hsl(202deg 64% 83%) 50%,
+    hsl(202deg 63% 81%) 53%,
+    hsl(202deg 62% 80%) 57%,
+    hsl(202deg 61% 79%) 61%,
+    hsl(203deg 61% 77%) 64%,
+    hsl(203deg 60% 76%) 67%,
+    hsl(203deg 60% 75%) 71%,
+    hsl(203deg 60% 73%) 74%,
+    hsl(203deg 59% 72%) 77%,
+    hsl(203deg 59% 71%) 80%,
+    hsl(203deg 59% 69%) 84%,
+    hsl(203deg 59% 68%) 87%,
+    hsl(203deg 59% 67%) 90%,
+    hsl(204deg 58% 65%) 93%,
+    hsl(204deg 58% 64%) 97%,
+    hsl(204deg 58% 62%) 100%
+  );
+}

@@ -1,0 +1,466 @@
+.customBackground {
+  background-image: linear-gradient(
+    115deg,
+    hsl(0deg 0% 0%) 0%,
+    hsl(245deg 77% 12%) 54%,
+    hsl(242deg 62% 18%) 76%,
+    hsl(242deg 70% 25%) 89%,
+    hsl(243deg 71% 32%) 96%,
+    hsl(242deg 68% 38%) 100%
+  );
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 3;
+  grid-row: span 3;
+  border-radius: 1rem;
+}
+.avatar {
+  border: solid 1px white;
+  width: 90%;
+  height: 92%;
+  border-radius: 14px;
+  background-image: url("/public/image/avatar/136982474_930247281071395_6128118276560947874_n.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Button File Me In */
+.spaceButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  overflow: hidden;
+  height: 42px;
+  background-size: 200% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(3rem);
+  border-radius: 3rem;
+  transition: 0.5s;
+  animation: gradient_301 15s ease infinite;
+  border: double 3px transparent;
+  background-image: linear-gradient(#000000cf, #000000ee),
+    linear-gradient(
+      137.48deg,
+      #f2eedf 10%,
+      #5f4655 45%,
+      #707b7e 67%,
+      #0044ff6e 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin-top: 20px;
+  margin-left: 18px;
+}
+
+.starsContainer {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 3rem;
+}
+
+.spaceButtonText {
+  z-index: 2;
+  font-family: "Avalors Personal Use";
+  font-size: 15px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+.glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.glowCircle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 10s infinite;
+  z-index: -1;
+}
+
+.glowCircle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.glowCircle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.spaceButton:hover .container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.spaceButton:hover {
+  transform: scale(1.1);
+}
+
+.spaceButton:active {
+  border: double 4px #fe53bb;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.spaceButton:active .glowCircle {
+  background: #fe53bb;
+}
+
+.stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 120s linear infinite;
+}
+
+.stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+.stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 100s linear infinite;
+}
+
+.stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+/*  */
+.cubeContainer {
+  width: 150px;
+  height: 150px;
+  perspective: 800px;
+  margin: 50px auto;
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 8s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  color: rgb(245, 245, 245);
+  font-size: 18px;
+  text-align: center;
+  line-height: 200px;
+  background: transparent;
+  opacity: 0.9;
+  border: 2px solid;
+  border-image: linear-gradient(
+      to right,
+      #e2d4d4,
+      #b5c4d1,
+      #ccd6c4,
+      #292922,
+      #6a5c5c
+    )
+    1;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.8);
+}
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cubeContainer:hover .cube {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+/* Box avatar */
+.one {
+  position: relative;
+  height: 98%;
+  width: 95%;
+  transform-style: preserve-3d;
+  animation: rot 2s infinite ease;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0px, inset 0 0 90px 0px;
+  color: white;
+  transition: 1.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/public/image/avatar/136982474_930247281071395_6128118276560947874_n.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.one .text {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.one:hover.one-div .text {
+  scale: 1.2;
+  opacity: 0.7;
+}
+
+.one:hover {
+  box-shadow: 0 0 30px 3000px rgba(0, 0, 0, 0.293),
+    inset 5px 5px 5px 0px rgb(31, 31, 31);
+}
+
+@keyframes rot {
+  0% {
+    transform: rotateX(-15deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotateX(-15deg) translateY(-10px);
+  }
+
+  100% {
+    transform: rotateX(-15deg) translateY(0px);
+  }
+}
+/* Am Nhac */
+.playerContainer {
+  background-color: rgba(255, 255, 255, 0.192);
+  /* border: 1px solid white; */
+  width: 125%;
+  height: 210px;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trackLoader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 4em;
+  padding-left: 1em;
+  padding-right: 1em;
+  transform: rotate(180deg);
+  justify-content: right;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3),
+    inset 0 0 5px rgba(0, 0, 0, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+  background-color: rgba(0, 0, 0, 0.432);
+}
+
+.trackLoader:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+}
+
+.currentPlaying {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.spotifyIcon {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.6em;
+}
+
+.headingText {
+  color: rgb(255, 255, 255);
+  font-size: 1.1em;
+  font-weight: bold;
+  align-self: center;
+}
+
+.loadingBars {
+  display: flex;
+  margin-top: 1em;
+  margin-left: 0.3em;
+}
+
+.bar {
+  width: 2px;
+  height: 33px;
+  background-color: limegreen;
+  animation: 1s animateBar infinite;
+  border-radius: 5px;
+  margin: 0.1em;
+}
+
+.bar:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.bar:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.playButton {
+  position: relative;
+  left: 0.35em;
+  height: 1.6em;
+  width: 1.6em;
+  clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+  background-color: black;
+  transform: rotate(-90deg);
+  align-self: center;
+  margin-top: 0.7em;
+  justify-self: center;
+}
+
+.albumCover {
+  position: relative;
+  margin-right: 1em;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(233, 232, 232);
+  align-self: center;
+  border-radius: 5px;
+}
+
+.trackInfo {
+  position: relative;
+  transform: rotate(180deg);
+  margin-right: 1em;
+  color: rgb(255, 255, 255);
+  align-self: center;
+}
+
+.artistName {
+  font-size: 0.6em;
+}
+
+@keyframes animateBar {
+  0% {
+    height: 0.2em;
+  }
+  25% {
+    height: 0.7em;
+  }
+  50% {
+    height: 1.5em;
+  }
+  100% {
+    height: 0.2em;
+  }
+}

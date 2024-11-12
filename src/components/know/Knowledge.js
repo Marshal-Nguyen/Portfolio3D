@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../Page/Layout/Layout.module.css";
+import styles from "../know/Knowledge.module.css";
 const Knowledge = () => {
   const technologies = [
     { name: "HTML", color: "#E34F26", logo: "image/logoTech/html.png" },

@@ -4,6 +4,8 @@ import { useGLTF, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import styles from "../Page/Layout/Layout.module.css";
 import Navigation from "../components/menu/Navigation";
+import Knowledge from "../components/know/Knowledge";
+import Social from "../components/social/Social";
 function AnimatedModel() {
   const glb = useGLTF("3d/b.glb");
   const mixer = useRef(null);
@@ -55,7 +57,7 @@ const TestSVG = () => {
   return (
     <div
       id="pageOwner"
-      className="flex-col justify-center gap-3 flex items-center"
+      className="flex-col justify-center gap-3 flex items-center w-[100%]"
       style={{
         backgroundImage: `linear-gradient(
           135deg,
@@ -88,47 +90,89 @@ const TestSVG = () => {
       {/* Page1 */}
       <div
         id="pageOne"
-        className=" w-[99%] h-screen bg-[#fff0] flex flex-cols items-center justify-center relative border border-black rounded-2xl">
+        className=" w-[98%] h-screen bg-[#fff0] flex  items-center justify-center relative  rounded-2xl ">
         {/* Component Center */}
-        <div id="component_center">
-          <svg
-            width="100%" // Đặt kích thước hiển thị
-            height="100%" // Đặt kích thước hiển thị
-            viewBox="0 0 26 22" // Điều chỉnh viewBox nếu cần
-            stroke="white"
-            stroke-width="0.02"
-            fill="rgba(0, 0, 0, 0)"
-            style={{ position: "absolute", top: 0, left: 0 }}
-            className=""
-            xmlns="http://www.w3.org/2000/svg">
-            <g>
-              <path
-                transform="translate(0, 3.5)"
-                d="M 2 0 C 4 0 8 0 12 0 Q 13 0 13 -1 C 13 -2 13 -2 13 -2 H 13 Q 13 -3 14 -3 C 17 -3 21 -3 24 -3 Q 25 -3 25 -2 C 25 3.3 25 7.7 25 9 Q 25 10 24 10 Q 23 10 23 10 Q 22 10 22 11 Q 22 17 22 17 C 22 17 22 18 21 18 Q 20 18 19 18 Q 19 18 19 18 C 17 18 19 16 17 16 C 13.7 16 11.3 16 9 16 Q 8 16 8 17 Q 8 18 7 18 C 5.7 18 3.3 18 2 18 Q 1 18 1 17 C 1 11.3 1 5.7 1 1 Q 1 0 2 0 Z M 24 10"
-              />
-            </g>
-          </svg>
-          <Canvas
-            style={{
-              position: "absolute",
-              top: "40%",
-              left: "50%",
-              transform: "translate(-55%, -39%)",
-              width: "800px", // Điều chỉnh kích thước của Canvas tại đây
-              height: "750px",
-              cursor: "none",
-            }}>
-            <ambientLight intensity={3} />
-            <pointLight position={[0, 5, 2]} intensity={100} />
-            <AnimatedModel />
-          </Canvas>
+        <div id="component_center" className="">
+          <span className="">
+            <svg
+              width="100%" // Đặt kích thước hiển thị
+              height="100%" // Đặt kích thước hiển thị
+              viewBox="0 0 25.8 22" // Điều chỉnh viewBox nếu cần
+              stroke="white"
+              stroke-width="0.02"
+              fill="rgba(0, 0, 0, 0)"
+              style={{ position: "absolute", top: 0, left: 0 }}
+              className=""
+              xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  transform="translate(0.2, 3.5)"
+                  d="M 2 0 C 4 0 8 0 12 0 Q 13 0 13 -1 C 13 -2 13 -2 13 -2 H 13 Q 13 -3 14 -3 C 17 -3 21 -3 24 -3 Q 25 -3 25 -2 C 25 3.3 25 7.7 25 9 Q 25 10 24 10 Q 23 10 23 10 Q 22 10 22 11 Q 22 17 22 17 C 22 17 22 18 21 18 Q 20 18 19 18 Q 19 18 19 18 C 17 18 19 16 17 16 C 13.7 16 11.3 16 9 16 Q 8 16 8 17 Q 8 18 7 18 C 5.7 18 3.3 18 2 18 Q 1 18 1 17 C 1 11.3 1 5.7 1 1 Q 1 0 2 0 Z M 24 10"
+                />
+              </g>
+            </svg>
+          </span>
+          <span className="">
+            <Canvas
+              style={{
+                position: "absolute",
+                top: "40%",
+                left: "50%",
+                transform: "translate(-33%, -39%)",
+                width: "800px", // Điều chỉnh kích thước của Canvas tại đây
+                height: "750px",
+                cursor: "none",
+              }}>
+              <ambientLight intensity={3} />
+              <pointLight position={[0, 5, 2]} intensity={100} />
+              <AnimatedModel />
+            </Canvas>
+          </span>
+          <div className="text-white text-[50px] left-[26%] top-[18%] absolute">
+            <span style={{ fontFamily: "Orbitron", display: "block" }}>
+              Nguyen Van
+            </span>
+            <span
+              style={{
+                fontFamily: "Orbitron",
+                display: "block",
+                marginLeft: "10px",
+                marginTop: "-15px",
+              }}>
+              Truong Giang
+            </span>
+            <p
+              className="mt-3 text-[14px] w-[340px] text-whỉte pr-8 rounded-lg italic"
+              style={{ textAlign: "justify" }}>
+              Front-end developer with 2 years of experience, I am dedicated to
+              creating exceptional website designs that prioritize user-centered
+              approaches to software development. My commitment is to build
+              optimal user interfaces, from requirements analysis to
+              implementation and optimization, to deliver products that are easy
+              to use and enjoyable.
+            </p>
+
+            <button type="button" className={styles.spaceButton}>
+              <strong className={styles.spaceButtonText}>Find me in</strong>
+              <div className={styles.starsContainer}>
+                <div className={styles.stars}></div>
+              </div>
+              <div className={styles.glow}>
+                <div className={styles.glowCircle}></div>
+                <div className={styles.glowCircle}></div>
+              </div>
+            </button>
+            <div>
+              <Social />
+            </div>
+          </div>
         </div>
         {/* Component right */}
         <div id="component_right">
           <svg
             width="100%" // Đặt kích thước hiển thị
             height="100%" // Đặt kích thước hiển thị
-            viewBox="0 0 26 22" // Điều chỉnh viewBox nếu cần
+            viewBox="0 0 25.6 22" // Điều chỉnh viewBox nếu cần
             stroke="white"
             stroke-width="0.02"
             fill="rgba(0, 0, 0, 0)"
@@ -144,31 +188,17 @@ const TestSVG = () => {
           </svg>
         </div>
         {/* Component top */}
-        <div id="component_right">
-          <svg
-            width="100%" // Đặt kích thước hiển thị
-            height="100%" // Đặt kích thước hiển thị
-            viewBox="0 0 26 22" // Điều chỉnh viewBox nếu cần
-            stroke="white"
-            stroke-width="0.02"
-            fill="rgba(0, 0, 0, 0)"
-            style={{ position: "absolute", top: 0, left: 0 }}
-            className=""
-            xmlns="http://www.w3.org/2000/svg">
-            <g>
-              <path
-                transform="translate(0, 3.5)"
-                d="M 11 -0.5 H 12 Q 12.5 -0.5 12.5 -1 V -2 Q 12.5 -3 11.5 -3 H 2 Q 1 -3 1 -2 V -1 Q 1 -0.5 1.5 -0.5 H 11"
-              />
-            </g>
-          </svg>
+        <div id="component_top" className="">
+          <div className="absolute top-[1.25rem] left-[24%]">
+            <Knowledge />
+          </div>
         </div>
         {/* Component left */}
-        <div id="component_right">
+        <div id="component_left">
           <svg
             width="100%" // Đặt kích thước hiển thị
             height="100%" // Đặt kích thước hiển thị
-            viewBox="0 0 26 22" // Điều chỉnh viewBox nếu cần
+            viewBox="0 0 25.4 22" // Điều chỉnh viewBox nếu cần
             stroke="white"
             stroke-width="0.02"
             fill="rgba(0, 0, 0, 0)"
@@ -178,19 +208,20 @@ const TestSVG = () => {
             <g>
               <path
                 transform="translate(0, 3.5)"
-                d="M -0.5 18 Q 0.5 18 0.5 17 V 6 Q 0.5 5 -0.5 5 H -8 Q -9 5 -9 6 Q -9 12 -9 17 Q -9 18 -8 18 H -0.5"
+                d="M -8 8.5 H -0.5 Q 0.5 8.5 0.5 7.5 V -2 Q 0.5 -3 -0.5 -3 H -8 Q -9 -3 -9 -2 V 7.5 Q -9 8.5 -8 8.5"
               />
             </g>
             <g>
               <path
                 transform="translate(0, 3.5)"
-                d="M -8 4.5 H -0.5 Q 0.5 4.5 0.5 3.5 V -2 Q 0.5 -3 -0.5 -3 H -8 Q -9 -3 -9 -2 V 3.5 Q -9 4.5 -8 4.5"
+                d="M -0.5 18 Q 0.5 18 0.5 17 V 10 Q 0.5 9 -0.5 9 H -8 Q -9 9 -9 10 Q -9 10 -9 17 Q -9 18 -8 18 H -0.5"
               />
             </g>
           </svg>
+          <div></div>
         </div>
         {/* Component Navigation */}
-        <div className="bottom-3 fixed z-50">
+        <div className="bottom-3 fixed z-50 lg:left-[40.6%]">
           <Navigation />
         </div>
       </div>

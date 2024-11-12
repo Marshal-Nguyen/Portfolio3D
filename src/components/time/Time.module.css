@@ -1,0 +1,27 @@
+.frameTime {
+  position: relative;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.403);
+}
+
+.frameTime::before {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 10px solid #4cbfff;
+}
+
+.day::before {
+  background-image: url("/public/image/icon/sun-svgrepo-com.svg");
+  background-color: #4cbfff; /* màu nền tùy ý cho ban ngày */
+}
+
+.night::before {
+  background-image: url("/public/image/icon/moon-dark-theme-svgrepo-com.svg");
+  background-color: #4cbfff; /* màu nền tùy ý cho ban đêm */
+}

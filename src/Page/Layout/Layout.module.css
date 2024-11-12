@@ -1,97 +1,42 @@
-.container {
-  width: 420px;
-  height: 80px;
-  margin-right: 8px;
-  background-color: #000000;
-  margin-bottom: 8px;
-  border-end-end-radius: 10px;
-  border-start-start-radius: 10px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 10px;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
-    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
-}
-
-.scroll {
-  display: flex;
-  animation: scroll 10s linear infinite; /* Tốc độ di chuyển */
-}
-
-.techCircle {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 10px;
-  color: rgb(1, 1, 1);
-  font-size: 7px;
-  border: solid 1px;
-}
-.techLogo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50%)); /* Di chuyển nửa danh sách để quay lại */
-  }
-}
-/* From Uiverse.io by MijailVillegas */
+/* Social */
 .navi {
-  width: 420px;
-  height: 80px;
-  background-color: #000000;
-  margin-left: 8px;
-  margin-bottom: 8px;
-  border-start-end-radius: 10px;
-  border-end-start-radius: 10px;
+  margin-top: 15px;
+  background-color: #00000000;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
-    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
 }
 .svg {
   margin-top: 5px;
+  margin-bottom: 5px;
   transition: all 0.3s;
-  padding: 1rem;
-  height: 60px;
-  width: 60px;
+  padding: 0.8rem;
+  height: 50px;
+  width: 50px;
   border-radius: 100%;
-  color: rgb(255, 255, 255);
+  color: rgb(21, 25, 26);
   fill: currentColor;
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
     inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
 }
 
 .text {
+  font-size: 15px;
+  width: 90px;
+  text-align: center;
   opacity: 0;
   border-radius: 5px;
-  font-weight: bold;
-  padding: 5px;
+  font-weight: 10px;
+  padding: 2px;
   transition: all 0.3s;
-  color: rgb(0, 157, 162);
-  background-color: rgba(255, 255, 255);
+  color: rgb(255, 255, 255);
+  background-color: rgba(238, 1, 1, 0);
   position: absolute;
   z-index: 9999;
-  box-shadow: -5px 0 1px rgba(153, 153, 153, 0.6),
-    -10px 0 1px rgba(153, 153, 153, 0.5),
-    inset 0 0 20px rgba(255, 255, 255, 0.7),
-    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 .iso {
-  transition: 0.5s;
+  transition: 0.8s;
 }
 .iso:hover a > .svg {
   transform: translate(15px, -15px);
@@ -100,7 +45,7 @@
 
 .iso:hover .text {
   opacity: 1;
-  transform: translate(25px, -2px) skew(-5deg);
+  transform: translate(25px, -4px) skew(-5deg);
 }
 
 .iso:hover .svg {
@@ -161,7 +106,7 @@
 
 .modelContainer {
   position: relative; /* Để cho ShibaModel và inner có thể căn giữa với nhau */
-  width: 100%; /* Điều chỉnh kích thước tùy ý */
+  width: 60%; /* Điều chỉnh kích thước tùy ý */
   height: 100%; /* Điều chỉnh chiều cao */
   left: 45px;
   top: -150px;
@@ -169,11 +114,11 @@
 }
 
 .inner {
-  --w: 100px;
-  --h: 150px;
+  --w: 50px;
+  --h: 110px;
   --translateZ: calc((var(--w) + var(--h)) + 0px);
   --rotateX: -2deg;
-  --perspective: 1000px;
+  --perspective: 500px;
   position: absolute;
   width: var(--w);
   height: var(--h);
@@ -222,4 +167,182 @@
       rgba(var(--color-card), 0.1) 80%,
       rgba(var(--color-card), 0.1) 100%
     );
+}
+/* Button File Me In */
+.spaceButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  overflow: hidden;
+  height: 42px;
+  background-size: 200% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(3rem);
+  border-radius: 3rem;
+  transition: 0.5s;
+  animation: gradient_301 15s ease infinite;
+  border: double 3px transparent;
+  background-image: linear-gradient(#000000cf, #000000ee),
+    linear-gradient(
+      137.48deg,
+      #f2eedf 10%,
+      #5f4655 45%,
+      #707b7e 67%,
+      #0044ff6e 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin-top: 20px;
+}
+
+.starsContainer {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 3rem;
+}
+
+.spaceButtonText {
+  z-index: 2;
+  font-family: "Avalors Personal Use";
+  font-size: 15px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+.glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.glowCircle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 10s infinite;
+  z-index: -1;
+}
+
+.glowCircle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.glowCircle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.spaceButton:hover .container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.spaceButton:hover {
+  transform: scale(1.1);
+}
+
+.spaceButton:active {
+  border: double 4px #fe53bb;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.spaceButton:active .glowCircle {
+  background: #fe53bb;
+}
+
+.stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 120s linear infinite;
+}
+
+.stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+.stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 100s linear infinite;
+}
+
+.stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }

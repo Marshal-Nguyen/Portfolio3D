@@ -1,0 +1,49 @@
+.containerInfo {
+  border: solid 1px white;
+  width: 90%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-color: white;
+  position: relative;
+  font-size: 15px;
+  /* font-family: ; */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.297);
+}
+.containerInfo::before {
+  content: "";
+  border: solid 1px #c4dbe9;
+  width: 90%;
+  height: 90%;
+  border-radius: 20px;
+  border-top-left-radius: 125px;
+  background-color: #cbebff;
+  margin-bottom: 10px;
+}
+.containerInfo::after {
+  content: "";
+  border: solid 5px #c4dbe9;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: #c4dbe9;
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.297);
+  padding: 10px;
+  background-image: url("/public/image/avatar/avatarMe.jpg");
+  background-size: cover;
+  background-position: 1px 1px;
+  background-repeat: no-repeat;
+}
+.frameName {
+  position: absolute;
+  width: 50%;
+  height: 20%;
+  top: 15%;
+  left: 43%;
+  font-weight: 600;
+}
